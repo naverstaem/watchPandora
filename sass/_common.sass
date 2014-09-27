@@ -1,0 +1,390 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts 
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)  
+// =book
+// 	font-family: "book", Arial, sans-serif 
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+
+//body
+//  font-family: Arial, sans-serif
+//  font-size: 12px
+//  line-height: 1.4
+=cr
+  font-family: "candararegular"
+  font-weight: normal
+  font-style: normal
+=ci
+  font-family: 'candaraitalic'
+  font-weight: normal
+  font-style: normal
+=forum
+  font-family: 'forumregular'
+  font-weight: normal
+  font-style: normal
+
+
+
+
+input.error, textarea.error, select.error
+  box-shadow: inset 0 0 10px red !important
+label.error
+  display: none !important
+
+
+.icon
+  display: inline-block
+  position: relative
+
+body
+  font-size: 16px
+  line-height: 1.4
+  background-color: #fff
+  color: #747374
+  font-family: 'candararegular'
+.out
+  position: relative
+input, textarea
+  +placeholder
+    font-size: 13px
+    color: #b3b3b3
+    +cr
+%in
+  max-width: 1200px
+  width: 1000px
+  margin-left: auto
+  margin-right: auto
+
+.fancybox-inner
+  +box-shadow(0 20px 40px -20px black)
+.myFancyClose
+  position: absolute
+  top: -40px
+  right: 50%
+  +transform(translate(50%))
+  +s(close)
+
+.btn
+  display: inline-block
+  +border-radius(21px)
+  padding: 5px 43px
+  color: #fff
+  text-transform: uppercase
+  font-family: 'candarabold'
+  font-size: 18px
+  text-decoration: none
+  +transition(background, .5s)
+  border: 3px solid #a58dc9
+
+  background-color: #a58dc9
+  +background-image(linear-gradient(to bottom, rgba(255,255,255,.09) 0%, rgba(0,0,0,.09) 100%))
+
+  &:hover
+    color: #a58dc9
+    background-color: lighten(#a58dc9, 90%)
+
+.title
+  text-align: center
+  font-size: 50px
+  +forum
+  line-height: 1.2em
+  color: #2e2e2e
+
+
+
+
+
+.counter
+  //width: 300px
+  position: relative
+  margin: 0 auto
+  margin-left: 0
+  text-align: center
+  background: url(../img/counter_bg.png) center center no-repeat
+  height: 59px
+  p
+    color: #bbbbbb
+    margin-bottom: 10px
+    margin-top: 5px
+    font-size: 12px
+    position: static
+    font-family: 'open_sansregular'
+    &.counter-title
+      font-size: 13px
+      color: #3e3e3e
+      text-transform: uppercase
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: inline-block
+
+    li
+      float: left
+      margin: 0 3px
+      text-align: center
+      position: relative
+      &:first-of-type
+        margin-left: 0
+      &:last-of-type
+        margin-right: 0
+
+
+      span
+        position: relative
+        //+text-shadow(0 1px 0 #fff)
+        display: block
+        font-size: 39px
+        padding-top: 4px
+        +box
+        width: 59px
+        height: 59px
+        +forum
+        color: #fff
+        font-family: 'forumregular'
+        &.last
+          &:after
+            content: ""
+        &:after
+          position: absolute
+          content: ':'
+          //+s(column)
+          color: #b9a6d7
+          font-size: 48px
+          top: -8px
+          right: -11px
+
+.form
+  width: 314px
+  height: 441px
+  margin-top: 20px
+  padding: 0
+  position: relative
+  +box
+  background: #ffffff
+  +border-radius(6px)
+  +box-shadow(0 30px 35px -30px #BC82BE)
+  .caption
+    box-sizing: border-box
+    padding-top: 20px
+
+  h3
+    font-size: 34px
+    color: #2e2e2e
+    font-family: 'forumregular'
+    font-weight: normal
+
+
+.frm
+  padding-top: 10px
+
+  //box-sizing: border-box
+  +box
+
+
+
+  h4
+    text-align: center
+    color: #ffffff
+    margin: 5px 0 0
+    font-weight: normal
+    font-family: 'Conv_PFDinTextCondPro-Thin'
+    font-size: 18px
+  h5
+    @extend h4
+    margin: 0
+    font-size: 24px
+    span
+      font-family: 'conv_pfdintextcondpro-light'
+form
+  margin-top: 25px
+  position: relative
+  input
+    padding-left: 16px
+    width: 269px
+    height: 33px
+    background: #fff
+    display: block
+    margin: auto auto 10px
+    +border-radius(18px)
+    +background-clip(padding-box)
+    +box
+    font-size: 16px
+    border: 1px solid #ececec
+    +box-shadow(inset 0 2px 3px rgba(0,0,0,.05))
+
+
+.button
+  +box
+  +border-radius(4px)
+  padding: 0 43px
+  height: 56px
+  color: #ffffff
+  +single-text-shadow(#b2b2b2)
+  display: block
+  margin: 25px auto auto
+  font-size: 23px
+  +background-clip(padding-box)
+  +border-radius(28px)
+  letter-spacing: 1px
+  text-decoration: none
+  background-color: #5ac2c0
+  text-transform: uppercase
+  +forum
+  +box-shadow(0 8px 32px -7px #4ba7a6)
+  +background-image(linear-gradient(to bottom, rgb(101,201,200) 0%, rgb(81,187,186) 95%, rgb(76,167,166) 100%))
+
+  &:hover
+    background: lighten(rgb(81,187,186), 10%)
+// common blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
