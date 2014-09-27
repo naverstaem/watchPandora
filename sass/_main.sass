@@ -135,7 +135,7 @@ header
           left: -18px
     a
       display: inline-block
-      padding-top: 15px
+      padding-top: 13px
 
 
 .beauty
@@ -291,8 +291,118 @@ header
       &:before
         content: "04"
 
+.review
+  padding-top: 70px
+  +box
+  +clr
+
+  .review_in
+    @extend %in
+    position: relative
+
+  &__item
+    display: inline-block
+    width: 280px
+    margin-right: 75px
+    margin-top: 70px
+    vertical-align: top
+    &:last-child
+      margin-right: 0px
+  &__caption
+    +forum
+    h3
+      font-size: 20px
+      color: #2e2e2e
+    .review__link
+      font-size: 14px
+      color: #5ac1c0
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  &__img
+    float: left
+    width: 68px
+    height: 68px
+    margin-right: 15px
+    img
+      +border-radius(50%)
+  &__text
+    position: relative
+    font-size: 14px
+    margin-top: 30px
+    font-family: 'candaraitalic'
+    color: #747374
 
 
+.order
+  background: url(../img/order_bg.jpg) center center no-repeat
+  height: 687px
+  +cover
+  .order_in
+    @extend %in
+  &__img
+    width: 510px
+    height: 486px
+    margin-top: 150px
+    float: left
+    position: relative
+    img
+      display: block
+    .petal1
+      width: 130px
+      height: 128px
+      position: absolute
+      top: -75px
+      left: 100px
+
+    .price
+      position: absolute
+      width: 171px
+      height: 171px
+      top: 33px
+      right: -50px
+      line-height: 2.5em
+      padding-top: 24px
+      background: rgba(119,203,203,.84)
+      +box
+      +border-radius(50%)
+      +forum
+      color: #ffffff
+      text-align: center
+      h3
+        font-size: 22px
+
+      h4
+        font-size: 46px
+        span
+          font-size: 41px
+      h5
+        position: relative
+        color: #a5ebea
+        font-size: 24px
+        &:after
+          position: absolute
+          content: ""
+          height: 0
+          left: 40px
+          right: 40px
+          border-bottom: solid 1px
+          top: 22px
+        span
+          font-size: 18px
+  &__form
+    position: relative
+    float: right
+    margin-right: 50px
+    margin-top: 120px
+    .petal2
+      position: absolute
+      bottom: -100px
+      right: -50px
+      width: 119px
+      height: 127px
+      img
+        display: block
 
 
 .choose
@@ -303,57 +413,7 @@ header
 .quality
 
 
-.order
 
-.review
-  padding-top: 70px
-  +box
-  +clr
-
-  .review_in
-    @extend %in
-    position: relative
-    &:before
-      position: absolute
-      content: ""
-      top: 25px
-      +s(wave2)
-      left: 50%
-      +transform(translate(-50%))
-  &__item
-    display: inline-block
-    width: 307px
-    margin-right: 34px
-    margin-top: 100px
-    &:last-child
-      margin-right: 0px
-  &__caption
-    h3
-      font-size: 18px
-      color: #56caca
-    h4
-      font-size: 12px
-      color: #949494
-  &__img
-    float: left
-    width: 53px
-    height: 53px
-    margin-right: 15px
-    img
-      +border-radius(50%)
-  &__text
-    border: 1px solid #e2e2e2
-    +border-radius(5px)
-    padding: 25px
-    position: relative
-    font-size: 13px
-    margin-top: 30px
-    &:before
-      position: absolute
-      content: ''
-      top: -7px
-      left: 20px
-      +s(review_popup)
 
 
 
@@ -402,7 +462,6 @@ header
     font-size: 20px
     color: #c3fdfd
     line-height: 1em
-    span
 
   &__price
     margin-top: 15px
