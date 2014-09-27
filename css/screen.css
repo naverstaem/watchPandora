@@ -181,7 +181,7 @@ header .header__text a { display: inline-block; padding-top: 13px; }
 .also { *zoom: 1; margin-top: 30px; }
 .also:after { content: " "; display: table; clear: both; }
 .also .also_in { position: relative; }
-.also__item { text-align: center; display: inline-block; width: 314px; margin-top: 55px; vertical-align: top; margin-right: 22px; padding-bottom: 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; background: #977fbb; padding-top: 10px; }
+.also__item { text-align: center; display: inline-block; width: 314px; margin-top: 55px; vertical-align: top; margin-right: 22px; padding-bottom: 10px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; background: #977fbb; padding-top: 10px; -moz-box-shadow: 0 14px 40px -7px #977fbb; -webkit-box-shadow: 0 14px 40px -7px #977fbb; box-shadow: 0 14px 40px -7px #977fbb; }
 .also__item:last-child { margin-right: 0; }
 .also__img { overflow: hidden; height: 177px; -moz-box-shadow: 0 36px 140px -60px #fff; -webkit-box-shadow: 0 36px 140px -60px #fff; box-shadow: 0 36px 140px -60px #fff; }
 .also__half { padding: 20px 20px 30px; position: relative; }
@@ -196,16 +196,19 @@ header .header__text a { display: inline-block; padding-top: 13px; }
 .also__form form { margin-top: 30px; }
 .also__form form .button { -moz-box-shadow: 0 8px 32px -7px #453957; -webkit-box-shadow: 0 8px 32px -7px #453957; box-shadow: 0 8px 32px -7px #453957; }
 
-footer { background: url(../img/footer_bg.png) repeat; -moz-background-size: cover 100%; -webkit-background-size: cover 100%; background-size: cover 100%; height: 144px; -moz-box-shadow: inset 0 -5px 25px -10px; -webkit-box-shadow: inset 0 -5px 25px -10px; box-shadow: inset 0 -5px 25px -10px; *zoom: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-top: 44px; }
+footer { background: url(../img/footer_bg.png) repeat; -moz-background-size: cover 100%; -webkit-background-size: cover 100%; background-size: cover 100%; height: 148px; *zoom: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; padding-top: 50px; margin-top: 80px; }
 footer:after { content: " "; display: table; clear: both; }
 footer .footer__manager { float: left; width: 320px; }
-footer .footer__manager .footer__img { float: left; margin-right: 20px; width: 58px; height: 58px; }
+footer .footer__manager .footer__img { float: left; margin-right: 20px; width: 58px; height: 58px; -moz-box-shadow: 0 8px 12px -7px black; -webkit-box-shadow: 0 8px 12px -7px black; box-shadow: 0 8px 12px -7px black; -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
 footer .footer__manager .footer__img img { -moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%; }
-footer .footer__manager h3 { color: #ffffff; font-size: 16px; padding-top: 5px; }
+footer .footer__manager h3 { color: #ffffff; font-size: 16px; padding-top: 5px; font-family: "open_sansbold"; font-weight: normal; }
+footer .footer__manager h3 span { font-family: "open_sanslight"; }
 footer .header__callme { float: left; margin-left: 210px; width: 460px; text-align: right; padding-top: 5px; }
-footer .header__callme .blue-number { color: #56caca; font-weight: normal; }
-footer .header__callme h3 { color: #fff; font-size: 16px; display: inline-block; float: left; }
-footer .header__callme a { vertical-align: top; float: right; background: none; }
+footer .header__callme .blue-number { color: #56caca; font-weight: normal; font-family: "open_sanslight"; }
+footer .header__callme h3 { color: #fff; font-size: 16px; display: inline-block; float: left; font-family: "open_sanslight"; font-weight: normal; }
+footer .header__callme h3 span { font-family: "open_sansbold"; }
+footer .header__callme a { vertical-align: top; float: right; background: none; padding: 4px 31px; color: #55c9c9; border-color: #55c9c9; }
+footer .header__callme a:hover { color: #55c9c9; }
 
 .order-watch, .callback { width: 307px; background: #56caca; padding: 20px 20px 30px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .order-watch h2, .callback h2 { text-align: center; color: #ffffff; font-size: 23px; }
