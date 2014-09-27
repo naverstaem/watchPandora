@@ -4,14 +4,14 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 
-    $('#form1').validate();
+    $('#form1 form').validate();
     $('#form5').validate();
     $('#form2').validate();
     $('#form3').validate();
     $('#form4').validate();
     $('#form6').validate();
 
-    $("#form1").ajaxForm({
+    $("#form1 form").ajaxForm({
         success: function () {
             $(".thanks-link").trigger('click');
         },
@@ -81,7 +81,8 @@ head.ready(function() {
         padding: 0,
         helpers: {
             overlay: {
-                locked: false
+                locked: false,
+                css:{'background' : 'rgba(24, 15, 39, 0.63)'}
             }
         },
         tpl: {

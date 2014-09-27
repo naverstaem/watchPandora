@@ -42,7 +42,7 @@
                     <li>Гарантия до 2-х лет</li>
                     <li>Оплата после примерки</li>
                 </ul>
-                <a href="#" class="button fancybox">заказать часы</a>
+                <a href="#orderWatch" class="button fancybox">заказать часы</a>
             </div>
 
         </div>
@@ -263,7 +263,7 @@
                         <input type="text" name="name" class="name required" placeholder="Имя">
                         <input type="text" name="phone" class="phone required"
                                placeholder="Телефон">
-                        <input type="text" name="phone" class="phone required"
+                        <input type="text" name="email" class="email required"
                                placeholder="E-mail">
                         <button class="button">заказать часы</button>
 
@@ -376,37 +376,32 @@
 </div>
 <!-- END out-->
 <div class="order-watch" id="orderWatch" style="display: none;">
-    <h2>Заказать часы GENEVA</h2>
+    <h2 class="title">Закажите сейчас по супер цене!</h2>
 
     <form action="#" method="post" id="form5">
-            <input type="text" name="name" class="name required" placeholder="Ваше имя">
-            <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
-        <input type="text" name="email" class="email required" placeholder="Ваш e-mail">
-        <select class="required" aria-required="true">
-            <option value="" disabled="" selected="">Выбрать цвет часов</option>
-            <option value="" disabled="">--------------------</option>
-            <option value="orange">Розовый</option>
-            <option value="blue">Желтый</option>
-            <option value="green">Фиолетовый</option>
-        </select>
-            <button class="button">отправить</button>
+            <input type="text" name="name" class="name required" placeholder="Имя">
+            <input type="text" name="phone" class="phone required" placeholder="Телефон">
+        <input type="text" name="email" class="email required" placeholder="E-mail">
+
+            <button class="button">Заказать часы</button>
 
 
     </form>
 </div>
 <div class="callback" id="callback" style="display: none;">
-    <h2>Заказать звонок</h2>
+    <h2 class="title">Закажите звонок</h2>
 
     <form action="#" method="post" id="form6">
-        <input type="text" name="name" class="name required" placeholder="Ваше имя">
-        <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
-        <button class="button">отправить</button>
+        <input type="text" name="name" class="name required" placeholder="Имя">
+        <input type="text" name="phone" class="phone required" placeholder="Телефон">
+        <button class="button">заказать звонок</button>
     </form>
 
 </div>
 <div class="thanks" id="thanks" style="display: none;">
     <div class="thanks__img">
-        <img src="img/like.png" alt="thanks"/>
+        <span class="vertical-aligned"></span>
+        <img src="img/check.png" alt="thanks"/>
     </div>
 
     <h2>Спасибо!</h2>
